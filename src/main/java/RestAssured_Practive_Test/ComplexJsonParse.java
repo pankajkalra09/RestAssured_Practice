@@ -12,6 +12,7 @@ public class ComplexJsonParse {
 		//Print Title of the first course
 		//Print All course titles and their respective Prices
 		//Print no of copies sold by RPA Course
+		//test
 		//Verify if Sum of all Course prices matches with Purchase Amount
 		int total = 0;
 		JsonPath js = new JsonPath(Paylod.CoursePrice());
