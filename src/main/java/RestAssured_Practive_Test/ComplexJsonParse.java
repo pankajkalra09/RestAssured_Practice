@@ -1,10 +1,13 @@
 package RestAssured_Practive_Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
 import data.Paylod;
 import io.restassured.path.json.JsonPath;
 
 public class ComplexJsonParse {
-	
-	public static void main(String [] args) 
+	@Test
+	public void JsonParse() 
 	
 	{
 		//Print No of courses returned by API
@@ -67,6 +70,8 @@ public class ComplexJsonParse {
 			
 		}
 		System.out.println("Total sum of all the courses is: "+sum);
+		int purchaseAmount = js.getInt("dashboard.purchaseAmount");
+		Assert.assertEquals(sum, purchaseAmount);
 		
 
 	}
