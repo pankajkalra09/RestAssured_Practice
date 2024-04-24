@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-22T11:09:03 EDT" name="Default suite" finished-at="2024-04-22T11:09:05 EDT" duration-ms="1721">
+  <suite started-at="2024-04-24T07:40:13 EDT" name="Default suite" finished-at="2024-04-24T07:40:18 EDT" duration-ms="5479">
     <groups>
     </groups>
-    <test started-at="2024-04-22T11:09:03 EDT" name="Default test" finished-at="2024-04-22T11:09:05 EDT" duration-ms="1721">
-      <class name="RestAssured_Practive_Test.ComplexJsonParse">
-        <test-method signature="JsonResolve()[pri:0, instance:RestAssured_Practive_Test.ComplexJsonParse@506ae4d4]" started-at="2024-04-22T11:09:03 EDT" name="JsonResolve" finished-at="2024-04-22T11:09:05 EDT" duration-ms="1672" status="PASS">
+    <test started-at="2024-04-24T07:40:13 EDT" name="Default test" finished-at="2024-04-24T07:40:18 EDT" duration-ms="5479">
+      <class name="NewFiles.JsonFileInput">
+        <test-method signature="CreatePlaceID()[pri:1, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:13 EDT" name="CreatePlaceID" finished-at="2024-04-24T07:40:15 EDT" duration-ms="2649" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- JsonResolve -->
-      </class> <!-- RestAssured_Practive_Test.ComplexJsonParse -->
+        </test-method> <!-- CreatePlaceID -->
+        <test-method signature="updatePlaceID()[pri:2, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:15 EDT" name="updatePlaceID" finished-at="2024-04-24T07:40:17 EDT" duration-ms="1436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updatePlaceID -->
+        <test-method signature="getPlaceID()[pri:3, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:17 EDT" name="getPlaceID" finished-at="2024-04-24T07:40:18 EDT" duration-ms="1341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getPlaceID -->
+      </class> <!-- NewFiles.JsonFileInput -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

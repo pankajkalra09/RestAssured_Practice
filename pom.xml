@@ -34,6 +34,11 @@
 			<artifactId>RestAPI_Practice</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>CrossBrowser</groupId>
+			<artifactId>CrossBrowser</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

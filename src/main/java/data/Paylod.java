@@ -11,7 +11,7 @@ public class Paylod {
 				+ "        \"lng\": 33.427362\r\n"
 				+ "    },\r\n"
 				+ "    \"accuracy\": 50,\r\n"
-				+ "    \"name\": \"Frontlines house\",\r\n"
+				+ "    \"name\": \"Frontlines dhouse\",\r\n"
 				+ "    \"phone_number\": \"(+91) 983 893 3937\",\r\n"
 				+ "    \"address\": \"292, side layout, cohen 09\",\r\n"
 				+ "    \"types\": [\r\n"
