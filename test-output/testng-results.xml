@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-24T07:40:13 EDT" name="Default suite" finished-at="2024-04-24T07:40:18 EDT" duration-ms="5479">
+  <suite started-at="2024-04-29T13:00:19 EDT" name="Default suite" finished-at="2024-04-29T13:00:21 EDT" duration-ms="2596">
     <groups>
     </groups>
-    <test started-at="2024-04-24T07:40:13 EDT" name="Default test" finished-at="2024-04-24T07:40:18 EDT" duration-ms="5479">
-      <class name="NewFiles.JsonFileInput">
-        <test-method signature="CreatePlaceID()[pri:1, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:13 EDT" name="CreatePlaceID" finished-at="2024-04-24T07:40:15 EDT" duration-ms="2649" status="PASS">
+    <test started-at="2024-04-29T13:00:19 EDT" name="Default test" finished-at="2024-04-29T13:00:21 EDT" duration-ms="2596">
+      <class name="JIRA.JiraScenarios">
+        <test-method signature="createSession()[pri:0, instance:JIRA.JiraScenarios@47605f2f]" started-at="2024-04-29T13:00:19 EDT" name="createSession" finished-at="2024-04-29T13:00:21 EDT" duration-ms="2545" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreatePlaceID -->
-        <test-method signature="updatePlaceID()[pri:2, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:15 EDT" name="updatePlaceID" finished-at="2024-04-24T07:40:17 EDT" duration-ms="1436" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updatePlaceID -->
-        <test-method signature="getPlaceID()[pri:3, instance:NewFiles.JsonFileInput@2c88b9fc]" started-at="2024-04-24T07:40:17 EDT" name="getPlaceID" finished-at="2024-04-24T07:40:18 EDT" duration-ms="1341" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getPlaceID -->
-      </class> <!-- NewFiles.JsonFileInput -->
+        </test-method> <!-- createSession -->
+      </class> <!-- JIRA.JiraScenarios -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

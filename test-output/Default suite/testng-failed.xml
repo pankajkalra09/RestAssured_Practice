@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="NewFiles.JsonFileInput">
+      <class name="JIRA.JiraScenarios">
         <methods>
-          <include name="getPlaceID"/>
-          <include name="updatePlaceID"/>
+          <include name="createSession"/>
         </methods>
-      </class> <!-- NewFiles.JsonFileInput -->
+      </class> <!-- JIRA.JiraScenarios -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

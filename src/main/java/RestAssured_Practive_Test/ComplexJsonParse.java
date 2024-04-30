@@ -2,7 +2,7 @@ package RestAssured_Practive_Test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import data.Paylod;
+import files.Paylod;
 import io.restassured.path.json.JsonPath;
 
 public class ComplexJsonParse {

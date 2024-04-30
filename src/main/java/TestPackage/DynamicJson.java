@@ -1,9 +1,9 @@
-package LibraryTest;
+package TestPackage;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import data.Paylod;
-import data.Reusable;
+import files.Paylod;
+import files.Reusable;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;

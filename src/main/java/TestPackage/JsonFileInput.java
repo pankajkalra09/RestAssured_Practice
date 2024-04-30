@@ -1,7 +1,6 @@
-package NewFiles;
+package TestPackage;
 
-import data.Paylod;
-import data.Reusable;
+
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
@@ -12,6 +11,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import org.testng.annotations.Test;
+
+import files.Reusable;
 
 public class JsonFileInput {
 
@@ -28,9 +29,7 @@ public class JsonFileInput {
 
 		// pass static json file as a body instead of the string.
 		// body method accepts string. We have json in a file so our goal is to convert
-		// the content of the file to string. To do that there is a way
-		// in java where content is converted into Byte first which is a datatype in
-		// java.
+		// the content of the file to string. To do that there is a way in java where content is converted into Byte first which is a datatype in java.
 		// Once we have byte data than we can convert byte data into string.
 		// Let's do IT
 
@@ -38,8 +37,7 @@ public class JsonFileInput {
 		// readAllBytes which will read all the content of the path we passed
 		// where json file is present and converts the content into bytes.
 
-		// to convert byte into string we need to create a string object using new
-		// String and parameterized the byte stuff.
+		// to convert byte into string we need to create a string object using new String and parameterized the byte stuff.
 
 		RestAssured.baseURI = "https://rahulshettyacademy.com";
 		String response = given().log().all().queryParam("key", "qaclick123").header("Content-Type", "application/json")

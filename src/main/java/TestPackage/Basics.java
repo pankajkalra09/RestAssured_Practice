@@ -1,12 +1,13 @@
-package NewFiles;
+package TestPackage;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-import data.Paylod;
-import data.Reusable;
+import files.Paylod;
+import files.Reusable;
+
 
 public class Basics {
 

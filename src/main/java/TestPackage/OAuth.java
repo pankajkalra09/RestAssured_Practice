@@ -1,4 +1,4 @@
-package NewFiles;
+package TestPackage;
 
 import static io.restassured.RestAssured.given;
 
