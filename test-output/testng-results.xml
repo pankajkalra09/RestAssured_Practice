@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-01T11:39:44 EDT" name="Default suite" finished-at="2024-05-01T11:39:59 EDT" duration-ms="14742">
+  <suite started-at="2024-05-01T12:02:18 EDT" name="Default suite" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3989">
     <groups>
     </groups>
-    <test started-at="2024-05-01T11:39:44 EDT" name="Default test" finished-at="2024-05-01T11:39:59 EDT" duration-ms="14742">
+    <test started-at="2024-05-01T12:02:18 EDT" name="Default test" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3989">
       <class name="JIRA.JiraScenarios">
-        <test-method signature="createSession()[pri:0, instance:JIRA.JiraScenarios@47605f2f]" started-at="2024-05-01T11:39:44 EDT" name="createSession" finished-at="2024-05-01T11:39:59 EDT" duration-ms="14674" status="PASS">
+        <test-method signature="createSession()[pri:0, instance:JIRA.JiraScenarios@47605f2f]" started-at="2024-05-01T12:02:18 EDT" name="createSession" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3938" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createSession -->

@@ -25,7 +25,7 @@ public class JiraScenarios {
 				+ "        \"project\": {\r\n"
 				+ "            \"key\": \"TEST\"\r\n"
 				+ "        },\r\n"
-				+ "        \"summary\": \"Attachment: Bug created from RestAssured to check comment new\",\r\n"
+				+ "        \"summary\": \"Get: Attachment: Bug created from RestAssured to check comment new\",\r\n"
 				+ "         \"issuetype\": {\r\n"
 				+ "            \"name\": \"Bug\"\r\n"
 				+ "        },\r\n"
@@ -35,20 +35,24 @@ public class JiraScenarios {
 				+ "        \"reporter\": {\r\n"
 				+ "            \"name\": \"philip\"\r\n"
 				+ "        },\r\n"
-				+ "        \"description\": \"Attachment: Sample defect description created via RestAssured to check comment new.\"\r\n"
+				+ "        \"description\": \"Get: Attachment: Sample defect description created via RestAssured to check comment new.\"\r\n"
 				+ "    }\r\n"
 				+ "}").filter(session).when().post("rest/api/2/issue").then()
 		.extract().response().asString();
 		JsonPath js = new JsonPath(issuecreate);
 		String issueID = js.get("id");
 		//Adding a new comment		
-		given().header("Content-Type","application/json").pathParam("key", issueID).log().all().body("{\r\n"
-				+ "    \"body\": \"Attachment: This is the comment made from RestAssured Code.\",\r\n"
+		String commentresponse = given().header("Content-Type","application/json").pathParam("key", issueID).log().all().body("{\r\n"
+				+ "    \"body\": \"Get: Attachment: This is the comment made from RestAssured Code.\",\r\n"
 				+ "    \"visibility\": {\r\n"
 				+ "        \"type\": \"role\",\r\n"
 				+ "        \"value\": \"Administrators\"\r\n"
 				+ "    }\r\n"
-				+ "}").filter(session).when().post("rest/api/2/issue/{key}/comment").then().assertThat().statusCode(201);
+				+ "}").filter(session).when().post("rest/api/2/issue/{key}/comment").then().extract().asString();
+		JsonPath js1 = new JsonPath(commentresponse);
+		String commentID = js1.get("id");
+		
+		
 		
 		// Add Attachment
 		//we have a curl command to do so that JIRA has provided. 
@@ -62,6 +66,16 @@ public class JiraScenarios {
 		given().header("X-Atlassian-Token", "no-check").pathParam("key", issueID).header("Content-type", "multipart/form-data")
 		.filter(session).multiPart("file", new File("blu1.jpg"))
 		.when().post("rest/api/2/issue/{key}/attachments").then().assertThat().statusCode(200);		
+		System.out.println("GET DETAILS");
+		//Get issue details which will all the details. Now to restrict of filter the results we will use Query parameters.
+		//So now we will see how to use Path parameters and Query parameters both in a single test.
+		//Path parameter will help us find out the sub-source. For example we have 10 JIRA issues, but we are capturing data for a particular JIRA.
+		//Query parameters > it will help us to do filteraization of existing result, sort or drill down the results.
+		String issuedetails = given().filter(session).pathParam("key", issueID).queryParam("fields", "comment").when().get("/rest/api/2/issue/{key}").then().extract().response().asString();
+		System.out.println(issuedetails);
+		
+		//Since we have filtered the results and limits to Comments only. Now we need to verify if the comment we added is the one we get as an response.
+		
 	}
 
 }
