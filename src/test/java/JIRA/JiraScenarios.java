@@ -3,6 +3,7 @@ import static io.restassured.RestAssured.*;
 
 import java.io.File;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
@@ -25,7 +26,7 @@ public class JiraScenarios {
 				+ "        \"project\": {\r\n"
 				+ "            \"key\": \"TEST\"\r\n"
 				+ "        },\r\n"
-				+ "        \"summary\": \"Get: Attachment: Bug created from RestAssured to check comment new\",\r\n"
+				+ "        \"summary\": \"07 may new: Get: Attachment: Bug created from RestAssured to check comment new\",\r\n"
 				+ "         \"issuetype\": {\r\n"
 				+ "            \"name\": \"Bug\"\r\n"
 				+ "        },\r\n"
@@ -35,15 +36,16 @@ public class JiraScenarios {
 				+ "        \"reporter\": {\r\n"
 				+ "            \"name\": \"philip\"\r\n"
 				+ "        },\r\n"
-				+ "        \"description\": \"Get: Attachment: Sample defect description created via RestAssured to check comment new.\"\r\n"
+				+ "        \"description\": \"07 may new: Get: Attachment: Sample defect description created via RestAssured to check comment new.\"\r\n"
 				+ "    }\r\n"
 				+ "}").filter(session).when().post("rest/api/2/issue").then()
 		.extract().response().asString();
 		JsonPath js = new JsonPath(issuecreate);
 		String issueID = js.get("id");
-		//Adding a new comment		
+		//Adding a new comment	
+		String expectedComment = "07 may new: Get: Attachment: This is the comment made from RestAssured Code.";
 		String commentresponse = given().header("Content-Type","application/json").pathParam("key", issueID).log().all().body("{\r\n"
-				+ "    \"body\": \"Get: Attachment: This is the comment made from RestAssured Code.\",\r\n"
+				+ "    \"body\": \""+expectedComment+",\r\n"
 				+ "    \"visibility\": {\r\n"
 				+ "        \"type\": \"role\",\r\n"
 				+ "        \"value\": \"Administrators\"\r\n"
@@ -75,7 +77,17 @@ public class JiraScenarios {
 		System.out.println(issuedetails);
 		
 		//Since we have filtered the results and limits to Comments only. Now we need to verify if the comment we added is the one we get as an response.
-		
+		JsonPath js2 = new JsonPath(issuedetails);
+		//String commentId = null;
+		int commentCount = js2.getInt("fields.comment.comments.size()");
+		for (int i=0;i<commentCount;i++) {
+			String commentId = js2.get("fields.comment.comments["+i+"].id").toString();
+			if (commentId.equalsIgnoreCase(commentID)) {
+				String comment = js2.get("fields.comment.comments["+i+"].body").toString();
+				System.out.println(comment);
+				Assert.assertEquals(comment, expectedComment);
+			}
+		}
 	}
 
 }

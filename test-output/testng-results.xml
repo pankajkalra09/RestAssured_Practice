@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-01T12:02:18 EDT" name="Default suite" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3989">
+  <suite started-at="2024-05-16T12:43:06 EDT" name="Default suite" finished-at="2024-05-16T12:43:10 EDT" duration-ms="4183">
     <groups>
     </groups>
-    <test started-at="2024-05-01T12:02:18 EDT" name="Default test" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3989">
-      <class name="JIRA.JiraScenarios">
-        <test-method signature="createSession()[pri:0, instance:JIRA.JiraScenarios@47605f2f]" started-at="2024-05-01T12:02:18 EDT" name="createSession" finished-at="2024-05-01T12:02:22 EDT" duration-ms="3938" status="PASS">
+    <test started-at="2024-05-16T12:43:06 EDT" name="Default test" finished-at="2024-05-16T12:43:10 EDT" duration-ms="4183">
+      <class name="TestPackage.oAuthNew">
+        <test-method signature="getaccesstoken()[pri:0, instance:TestPackage.oAuthNew@3918c187]" started-at="2024-05-16T12:43:06 EDT" name="getaccesstoken" finished-at="2024-05-16T12:43:10 EDT" duration-ms="4056" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createSession -->
-      </class> <!-- JIRA.JiraScenarios -->
+        </test-method> <!-- getaccesstoken -->
+      </class> <!-- TestPackage.oAuthNew -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
