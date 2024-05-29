@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="JIRA.JiraScenarios">
+      <class name="OnBoardingRestAssured.ScheduleDemo">
         <methods>
-          <include name="createSession"/>
+          <include name="scheduleDemoTest"/>
         </methods>
-      </class> <!-- JIRA.JiraScenarios -->
+      </class> <!-- OnBoardingRestAssured.ScheduleDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
