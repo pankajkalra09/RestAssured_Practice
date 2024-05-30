@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-29T12:06:42 EDT" name="Default suite" finished-at="2024-05-29T12:06:50 EDT" duration-ms="7299">
+  <suite started-at="2024-05-30T10:47:16 EDT" name="Default suite" finished-at="2024-05-30T10:47:23 EDT" duration-ms="6590">
     <groups>
     </groups>
-    <test started-at="2024-05-29T12:06:42 EDT" name="Default test" finished-at="2024-05-29T12:06:50 EDT" duration-ms="7299">
+    <test started-at="2024-05-30T10:47:16 EDT" name="Default test" finished-at="2024-05-30T10:47:23 EDT" duration-ms="6590">
       <class name="OnBoardingRestAssured.ScheduleDemo">
-        <test-method signature="scheduleDemoTest()[pri:0, instance:OnBoardingRestAssured.ScheduleDemo@64dafeed]" started-at="2024-05-29T12:06:42 EDT" name="scheduleDemoTest" finished-at="2024-05-29T12:06:50 EDT" duration-ms="7244" status="PASS">
+        <test-method signature="scheduleDemoTest()[pri:0, instance:OnBoardingRestAssured.ScheduleDemo@64dafeed]" started-at="2024-05-30T10:47:16 EDT" name="scheduleDemoTest" finished-at="2024-05-30T10:47:23 EDT" duration-ms="6544" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scheduleDemoTest -->
