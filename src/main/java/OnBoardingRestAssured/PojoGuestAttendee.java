@@ -1,5 +1,7 @@
 package OnBoardingRestAssured;
 
+import java.util.List;
+
 public class PojoGuestAttendee {
 	
 	private String email;
@@ -8,8 +10,8 @@ public class PojoGuestAttendee {
 		return email;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmail(String list) {
+		this.email = list;
 	}
 	
 

@@ -11,17 +11,17 @@ public class PojoScheduleDemoBody {
 	private String startDateTime;
 	private String endDateTime;
 	private int duration;
-	//private List<PojoGuestAttendee> guestAttendees;
+	private List<PojoGuestAttendee> guestAttendees;
 	
 	public String getSummary() {
 		return summary;
 	}
-//	public List<PojoGuestAttendee> getGuestAttendees() {
-//		return guestAttendees;
-//	}
-//	public void setGuestAttendees(List<PojoGuestAttendee> guestAttendees) {
-//		this.guestAttendees = guestAttendees;
-//	}
+	public List<PojoGuestAttendee> getGuestAttendees() {
+		return guestAttendees;
+	}
+	public void setGuestAttendees(List<PojoGuestAttendee> guestAttendees) {
+		this.guestAttendees = guestAttendees;
+	}
 	public void setSummary(String summary) {
 		this.summary = summary;
 	}

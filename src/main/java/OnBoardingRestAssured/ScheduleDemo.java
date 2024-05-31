@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import io.restassured.builder.RequestSpecBuilder;
@@ -28,7 +29,7 @@ public class ScheduleDemo {
 		//now we will create the object of pojo class the use it to pass the body information.
 		LoginPojoClass loginpojoobject = new LoginPojoClass();
 		loginpojoobject.setUserId("pankaj_kalra@unifyed.com");
-		loginpojoobject.setotp(952221);
+		loginpojoobject.setotp(334295);
 		//LoginResponse loginResponseObject = new LoginResponse();
 		
 		//let's create a subobject for the below statement
@@ -51,11 +52,11 @@ public class ScheduleDemo {
 		RequestSpecification scheduleDemoReqSpec = new RequestSpecBuilder().setBaseUri("https://onboarding.qa.unifyedx.com:3001/")
 				.addHeader("authorization", bearerToken).setContentType(ContentType.JSON).build();
 		
-		//PojoGuestAttendee guestReq = new PojoGuestAttendee();
-	//	guestReq.setEmail("shubhamkohli856595@gmail.com");
+		PojoGuestAttendee guestReq = new PojoGuestAttendee();
+		guestReq.setEmail("shubhamkohli856595@gmail.com");
 		
-		//List<PojoGuestAttendee> guestEmailList = new ArrayList<PojoGuestAttendee>();
-		//guestEmailList.add(guestReq);
+		List<PojoGuestAttendee> guestEmailList = new ArrayList<PojoGuestAttendee>();
+		guestEmailList.add(guestReq);
 		
 		PojoScheduleDemoBody demoBody = new PojoScheduleDemoBody();
 		demoBody.setDuration(1);
@@ -63,9 +64,9 @@ public class ScheduleDemo {
 		demoBody.setProductName("Unifyed Engage");
 		demoBody.setSummary("Unifyed Product Demo");
 		demoBody.setTimeZone("America/New_York");
-		demoBody.setStartDateTime("2024-06-04T06:00:00-04:00");
-		demoBody.setEndDateTime("2024-06-04T07:00:00-04:00");
-		//demoBody.setGuestAttendees(guestEmailList);
+		demoBody.setStartDateTime("2024-06-04T08:00:00-04:00");
+		demoBody.setEndDateTime("2024-06-04T09:00:00-04:00");
+		demoBody.setGuestAttendees(guestEmailList);
 		//664b5faeecd6b21c7b66a877
 		
 		String scheduleresponse = given().log().all().spec(scheduleDemoReqSpec).body(demoBody).when().post("api/calendar/scheduleDemo")
